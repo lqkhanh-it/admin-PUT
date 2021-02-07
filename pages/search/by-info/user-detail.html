@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>新規会員登録の方法｜Put</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../../dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<style>
+  .text-light-blue {
+    color: #0b9eb2;
+    font-weight: bold;
+  }
+  .bg-light-blue {
+    background-color: #0b9eb2;
+    width: 100%;
+  }
+  .border-header {
+    border: 2px solid #7ac0ce!important;
+    box-sizing: border-box;
+    color: #000000;
+    background: #ffffff;
+    width: 100%;
+  }
+  .input-all{
+    border: 2px solid #7ac0ce!important;
+    font-size: 1.13rem;
+    line-height: 1em;
+    height: auto!important;
+    letter-spacing: 0.05em;
+    padding: 15px!important;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #000000;
+    background: #ffffff;
+    width: 100%;
+    font-family: "Noto Sans Japanese", -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
+.logo-style {
+    position:absolute;
+    top: -2px;
+    left: 10px;
+    z-index: 1000;
+  }
+  .rela {
+    position: relative;
+  }
+  .nav-sidebar .menu-open>.nav-link i.right {
+      -webkit-transform: rotate(0deg)!important;
+      transform: rotate(0deg)!important;
+  }
+  .border-blue {
+    border: 1px solid #7ac0ce!important;
+  }
+  .text-light-blue {
+    color: #0b9eb2;
+    font-weight: bold;
+  }
+  .bg-alert {
+    background-color: #E2F0F2!important;
+    color: #0b9eb2;
+    font-weight: bold;
+    border: none;
+  }
+  @media (max-width: 992px) {
+    .logo-style {
+      left: 38vw;
+  }
+}
+
+</style>
+<body class="hold-transition sidebar-mini rela" style="background-color: #E2F0F2;">
+  <a href="file:///D:/ADMIN/AdminLTE-3.0.5/index.html" class="brand-link logo-style">
+    <img src="../../../dist/img/logo.svg" alt="PUT Logo"
+         style="height: 35px;">
+  </a>
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+       <!-- Brand Logo -->
+      
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="file:///D:/ADMIN/AdminLTE-3.0.5/pages/login/login.html">
+          <p class="fw-bold">ログアウト</p>
+        </a>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark" style="margin-top: 57px;background-color: #7ac0ce;">
+   
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+         <!-- one -->
+
+         <li class="nav-item has-treeview">
+          <a href="file:///D:/ADMIN/AdminLTE-3.0.5/index.html" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              ダッシュボード
+              <i class="right fas fa-caret-right"></i>
+            </p>
+          </a>
+        </li>
+
+         <!-- two -->
+         
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                ユーザー検索
+                <i class="right fas fa-caret-right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="file:///D:/ADMIN/AdminLTE-3.0.5/pages/search/by-info/search-user.html" class="nav-link active">
+                  <i class="left fas fa-caret-right px-3"></i>
+                  <p>登録情報で検索</p>
+                </a>
+              </li>
+              <li class="nav-item ">
+                <a href="file:///D:/ADMIN/AdminLTE-3.0.5/pages/search/exceeded-period.html" class="nav-link d-flex">
+                  <i class="left fas fa-caret-right px-3"></i>
+                  <div><p>返却期限超過 ユーザー検索</p></div>
+                  
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- three -->
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                ダウンロード
+                <i class="right fas fa-caret-right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="file:///D:/ADMIN/AdminLTE-3.0.5/pages/download/shipping-address.html" class="nav-link">
+                  <i class="left fas fa-caret-right px-3"></i>
+                  <p>発送手続き商品</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="file:///D:/ADMIN/AdminLTE-3.0.5/pages/download/checkout.html" class="nav-link">
+                  <i class="left fas fa-caret-right px-3"></i>
+                  <p>決済ログ</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- four -->
+
+          <li class="nav-item has-treeview">
+            <a href="file:///D:/ADMIN/AdminLTE-3.0.5/pages/order-confirm/confirm.html" class="nav-link">
+              <i class="nav-icon fas fa-tree"></i>
+              <p>
+                アップロード 
+                <i class="right fas fa-caret-right"></i>
+              </p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2 mt-4">
+          <div class="col-sm-6">
+            <h1 class="text-light-blue">ユーザー情報詳細</h1>
+          </div>
+        </div>
+        <div>LINE payナンバーをクリックすると、ユーザー情報詳細画面に遷移します</div>
+        <div class="row">
+            <div class="alert alert-info mt-3 col-12 col-xl-10 bg-alert" role="alert">
+                <i class="fas fa-circle nav-icon"></i>
+                <p class="d-inline ml-2">個人情報</p>
+            </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+
+            <!-- /.card -->
+
+            <div class="card bg-transparent border-0 shadow-none">
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 col-xl-5">
+                      <div class="form-group">
+                        <label class="text-light-blue">LINE payナンバー（半角数字）</label>
+                        <input type="text" class="form-control select2 text-center input-all" placeholder="12345678901" style="width: 100%;">
+                      </div>
+                      <!-- /.form-group -->
+                      <div class="form-group">
+                        <label class="text-light-blue">お名前（全角）</label>
+                        <input type="text" class="form-control select2 text-center input-all" placeholder="伊藤   忠雄" style="width: 100%;">
+                      </div>
+                      <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-6 col-xl-5">
+                      <div class="form-group">
+                        <label class="text-light-blue">電話番号（半角数字）</label>
+                        <input type="number" class="form-control select2 text-center input-all" placeholder="0334972121" style="width: 100%;">
+                      </div>
+                      <!-- /.form-group -->
+                      <div class="form-group">
+                        <label class="text-light-blue">フリガナ（全角）</label>
+                        <input type="text" class="form-control select2 text-center input-all" placeholder="イトウ   タダオ" style="width: 100%;">
+                      </div>
+                      <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                  </div>
+                  <!-- /.row -->
+      
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-xl-5">
+                      <div class="form-group">
+                        <label class="text-light-blue">生年月日</label>
+                        <input type="date" class="form-control select2 text-center input-all" style="width: 100%;">
+                      </div>
+                      <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-12 col-sm-6 col-xl-5">
+                      <div class="form-group">
+                        <label class="text-light-blue">性別</label>
+                        <div class="select2-purple">
+                          <select class="form-control select2 text-center input-all" data-placeholder="男性"  style="width: 100%;">
+                              <option>男性</option>
+                              <option>男性</option>
+                            </select>
+                        </div>
+                      </div>
+                      <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                  <!-- /.row  -->
+      
+                <div class="row">
+                      <div class="col-12 col-sm-6 col-xl-5">
+                        <div class="form-group">
+                          <label class="text-light-blue">メールアドレス（半角英数字）</label>
+                          <input type="email" class="form-control select2 text-center input-all" placeholder="itou@abc.com" style="width: 100%;">
+                        </div>
+                        <!-- /.form-group -->
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-12 col-sm-6 col-xl-5">
+                        <div class="form-group">
+                          <label class="text-light-blue">職業</label>
+                          <input type="text" class="form-control select2 text-center input-all" placeholder="公務員" style="width: 100%;">
+                        </div>
+                        <!-- /.form-group -->
+                      </div>
+                      <!-- /.col -->
+                </div>
+      
+                  <!-- /.row -->
+                <div class="row">
+                      <div class="col-md-6 col-xl-5">
+                        <div class="row">
+                            <div class="col">
+                              <div class="form-group">
+                                  <label class="text-light-blue">住所（半角数字）</label>
+                                  <input type="number" class="form-control select2 text-center input-all" placeholder="1078077" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="col">
+                              <div class="form-group">
+                                  <label></label>
+                                  <button class="btn btn-dark mt-2" style="width: 100%; padding: 14px!important;">住所検索</button>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- /.form-group -->
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-md-6 col-xl-5">
+                          <div class="row">
+                              <div class="col">
+                                  <div class="form-group">
+                                      <label></label>
+                                      <button class="btn btn-default mt-2 input-all" style="width: 100%;">東京都</button>
+                                  </div>
+                              </div>
+                              <div class="col">
+                                  <div class="form-group">
+                                      <label></label>
+                                      <button class="btn btn-default mt-2 input-all" style="width: 100%;">港区南青山</button>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- /.form-group -->
+                      </div>
+                      <!-- /.col -->
+                </div>
+      
+                    <!-- ./row -->
+                <div class="row">
+                      <div class="col-12 col-sm-6 col-xl-5">
+                        <div class="form-group">
+                          <input type="email" class="form-control select2 text-center input-all" placeholder="2丁目5番1号" style="width: 100%;">
+                        </div>
+                        <!-- /.form-group -->
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-12 col-sm-6 col-xl-5">
+                        <div class="form-group">
+                          <input type="text" class="form-control select2 text-center input-all" placeholder="建物名・部屋番号" style="width: 100%;">
+                        </div>
+                        <!-- /.form-group -->
+                      </div>
+
+                      <!-- /.col -->
+                </div>
+
+                  <!-- ./row -->
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-xl-5">
+                        <div class="alert alert-info bg-alert" role="alert">
+                            <i class="fas fa-circle nav-icon"></i>
+                            <p class="d-inline ml-2">身分証</p>
+                        </div>
+                        <div class="alert text-center input-all" role="alert">
+                            <p class="d-inline ml-2">運転免許証</p>
+                        </div>
+                        <div class="alert alert-info" style="height: 400px;"></div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-5">
+                        <div class="alert alert-info bg-alert" role="alert">
+                            <i class="fas fa-circle nav-icon"></i>
+                            <p class="d-inline ml-2">顔写真情報</p>
+                        </div>
+                        <div class="alert alert-info" style="height: 467px;"></div>
+                    </div>
+                </div>
+
+                <!-- ./row  -->
+                <div class="row">
+                    <div class="col-12 col-xl-10">
+                        <div class="alert alert-info bg-alert" role="alert">
+                            <i class="fas fa-circle nav-icon"></i>
+                            <p class="d-inline ml-2">身分証</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- ./row  -->
+                 <div class="row">
+                    <div class="col-6 col-xl-5">
+                        <button class="btn btn-info py-3 mb-3" style="width: 100%;">登録商品一覧</button>
+                    </div>
+                </div>
+      
+                <!-- ./row  -->
+                <div class="row">
+                    <div class="col-12 col-xl-10">
+                        <div class="alert alert-info bg-alert" role="alert">
+                            <i class="fas fa-circle nav-icon"></i>
+                            <p class="d-inline ml-2">身分証</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ./row  -->
+                <div class="row">
+                    <div class="col col-12 col-xl-10">
+                        <div class="my-3 text-light-blue">商品コードをクリックすると、登録商品画面に遷移します。</div>
+                        <table id="example1" class="table table-bordered table-striped bg-light text-center">
+                            <thead class="bg-secondary">
+                                <tr>
+                                    <th>LINE payナンバー</th>
+                                    <th>お名前</th>
+                                    <th>生年月日</th>
+                                    <th>性別</th>
+                                    <th>電話番号</th>
+                                    <th>メールアドレス</th>
+                                    <th>住所</th>
+                                    <th>職業</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#">12345678901</a></td>
+                                    <td>伊藤　忠雄</td>
+                                    <td>2010年4月30日</td>
+                                    <td>男性</td>
+                                    <td>0334972121</td>
+                                    <td>itou@abc.com</td>
+                                    <td>東京都港区南青山2丁目5番1号</td>
+                                    <td>公務員</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                 <!-- ./row  -->
+                 <div class="row mt-3">
+                    <div class="col-12 col-xl-10">
+                        <div class="alert alert-info bg-alert" role="alert">
+                            <i class="fas fa-circle nav-icon"></i>
+                            <p class="d-inline ml-2">アカウントステータス編集</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ./row  -->
+                <div class="row ">
+                    <div class="col-12 col-sm-6 col-xl-5">
+                        <label class="text-light-blue">アカウント状態</label>
+                        <div class="alert alert-light border border-info border-3 text-center input-all" role="alert">
+                            <p class="d-inline ml-2">運転免許証</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-5">
+                        <div class="form-group">
+                            <label></label>
+                            <select class="form-control select2 mt-1 input-all rounded-0" style="width: 100%;">
+                              <option selected="selected">Alabama</option>
+                              <option>Alaska</option>
+                              <option>California</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                 <!-- ./row  -->
+                 <div class="row ">
+                    <div class="col-12 col-sm-6 col-xl-5">
+                        <button type="button" class="btn btn-danger py-3 rounded-4" style="width: 100%;">更新</button>
+                    </div>
+                </div>
+                
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+  
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="../../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="../../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE -->
+<script src="../../../dist/js/adminlte.js"></script>
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="../../../plugins/chart.js/Chart.min.js"></script>
+<script src="../../../dist/js/demo.js"></script>
+<script src="../../../dist/js/pages/dashboard3.js"></script>
+
+<!-- page script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+
+
+
+</script>
+</body>
+</html>

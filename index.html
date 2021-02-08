@@ -64,25 +64,31 @@
     background-color: #e1e3e6;
     border-color: #7ac0ce;
   }
+
   @media (max-width: 992px) {
     .logo-style {
       left: 38vw;
-    }
-    .mt-cus {
-      margin-top: 20px;
-    }
-
-}
-@media (max-width: 765px) {
-    .mt-cus {
-      margin-top: 20px;
     }
     .span-ico {
       display: inline-block;
       width: 100%;
       text-align: center;
     }
+    .mt-cus {
+      margin-top: 20px;
+    }
+    
+
 }
+@media (max-width: 1152px) {
+
+    .span-ico {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+}
+
 </style>
 <!--
 BODY TAG OPTIONS:
@@ -230,18 +236,27 @@ to get the desired effect
               </div>
               <div class="card-body pt-2 ml-4">
                 <div class="row">
-                    <div class="input-group date col-12 col-md-3" style="height: 50px;">
-                      <input type="date" style="height: 50px;width: 100%;"  class="border-0 p-2 border-blue"/>
+                    <div class="col-12 col-md mr-2">
+                      <div class="row">
+                        <div class="input-group date col-12 col-md" style="height: 50px;">
+                          <input type="date" style="height: 50px;width: 100%;"  class="border-0 p-2 border-blue"/>
+                        </div>
+                          <span class="pt-2 span-ico" style="font-weight: bold;font-size: 20px;">~</span>
+                        <div class="input-group date col-12 col-md" style="height: 50px;">
+                          <input type="date" style="height: 50px;width: 100%;"  class="border-0 p-2 border-blue"/>
+                        </div>
+                      </div>
                     </div>
-                    <span class="pt-2 span-ico" style="font-weight: bold;font-size: 20px;">~</span>
-                    <div class="input-group date col-12 col-md-3" style="height: 50px;">
-                      <input type="date" style="height: 50px;width: 100%;"  class="border-0 p-2 border-blue"/>
-                    </div>
-                    <div class="col-12 col-md-1 mt-cus">
-                      <button class="btn btn-lg pr-3" style="color: #0b9eb2; background-color: #E2F0F2;"><i class="left fas fa-caret-right pf-2  pr-4"></i>検索</button>
-                    </div>
-                    <div class="col-12 col-md-3 mt-cus">
-                      <button class="btn btn-primary btn-lg" style="background-color: #0b9eb2;border-color: #0b9eb2;"> 検索 ダウンロード</button>
+
+                    <div class="col col-md">
+                      <div class="row">
+                        <div class="mt-cus mr-2">
+                          <button class="btn btn-lg pr-3" style="color: #0b9eb2; background-color: #E2F0F2;"><i class="left fas fa-caret-right pf-2  pr-4"></i>検索</button>
+                        </div>
+                        <div class="mt-cus">
+                          <button class="btn btn-primary btn-lg" style="background-color: #0b9eb2;border-color: #0b9eb2;"> 検索 ダウンロード</button>
+                        </div>
+                      </div>
                     </div>
                 </div>
                                
@@ -341,6 +356,9 @@ to get the desired effect
               </div>
               <!-- /.card-header -->
               <div class="card-body">
+                <div class="table-reponsive" style="overflow-x:auto;">
+
+                
                 <table class="table table-bordered bg-light">
                   <thead class="bg-secondary  text-center">
                   <tr>
@@ -411,6 +429,7 @@ to get the desired effect
                   </tr>
                   </tbody>
                 </table>
+              </div>
                 <div class="mt-5 d-flex justify-content-center">
                   <nav aria-label="...">
                     <ul class="pagination">

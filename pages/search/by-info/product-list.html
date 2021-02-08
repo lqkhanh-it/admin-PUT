@@ -11,9 +11,6 @@
   <link rel="stylesheet" href="../../../plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="../../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="../../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../../dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
@@ -65,14 +62,55 @@
   .border-blue {
     border: 1px solid #7ac0ce!important;
   }
-  .text-light-blue {
+  .pagination li a{
+    border: 1px solid #7ac0ce;
+    margin: 2px;
+    background-color: transparent;
+    border-radius: 0px!important;
+    color: #7ac0ce;
+  }
+  .nav-pills .nav-link {
+    color: white;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #E2F0F2;
     color: #0b9eb2;
+  }
+  .nav-pills .nav-link:not(.active):hover {
+    color: #ffffffb4;
+  }
+  .sidebar .nav-link {
+    border-bottom: 1px solid white;
+    border-radius: 0px!important;
+  }
+  .page-link:hover {
+    color: #7ac0ce;
+    background-color: #E2F0F2;
+    border-color: #E2F0F2;
+  }
+  .alert-info {
+    color: #0b9eb2;
+    background: #7ac0ce;
+    border-color: #7ac0ce;
+  }
+  .btn-secondary {
+    color: #000000;
     font-weight: bold;
   }
   @media (max-width: 992px) {
     .logo-style {
       left: 38vw;
   }
+}
+@media (max-width: 765px) {
+    .mt-cus {
+      margin-top: 20px;
+    }
+    .span-ico {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
 }
 
 </style>
@@ -89,7 +127,7 @@
        <!-- Brand Logo -->
       
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <a class="nav-link  text-light-blue" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars "></i></a>
       </li>
     </ul>
 
@@ -98,7 +136,7 @@
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link" href="../../login/login.html">
+        <a class="nav-link text-light-blue" href="../../login/login.html">
           <p class="fw-bold">ログアウト</p>
         </a>
     </ul>
@@ -120,7 +158,6 @@
 
          <li class="nav-item has-treeview">
           <a href="../../../index.html" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               ダッシュボード
               <i class="right fas fa-caret-right"></i>
@@ -132,7 +169,6 @@
          
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-copy"></i>
               <p>
                 ユーザー検索
                 <i class="right fas fa-caret-right"></i>
@@ -141,15 +177,14 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="../../search/by-info/search-user.html" class="nav-link active">
-                  <i class="left fas fa-caret-right px-3"></i>
+                  <i class="left fas fa-caret-right px-2"></i>
                   <p>登録情報で検索</p>
                 </a>
               </li>
               <li class="nav-item ">
-                <a href="../../search/exceeded-period.html" class="nav-link d-flex">
-                  <i class="left fas fa-caret-right px-3"></i>
-                  <div><p>返却期限超過 ユーザー検索</p></div>
-                  
+                <a href="../../search/exceeded-period.html" class="nav-link d-flex pr-0">
+                  <i class="left fas fa-caret-right px-2 pt-1"></i>
+                  <p>返却期限超過 ユーザー検索</p>
                 </a>
               </li>
             </ul>
@@ -159,7 +194,6 @@
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 ダウンロード
                 <i class="right fas fa-caret-right"></i>
@@ -168,13 +202,13 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="../../download/shipping-address.html" class="nav-link">
-                  <i class="left fas fa-caret-right px-3"></i>
+                  <i class="left fas fa-caret-right px-2"></i>
                   <p>発送手続き商品</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="../../download/checkout.html" class="nav-link">
-                  <i class="left fas fa-caret-right px-3"></i>
+                  <i class="left fas fa-caret-right px-2"></i>
                   <p>決済ログ</p>
                 </a>
               </li>
@@ -185,7 +219,6 @@
 
           <li class="nav-item has-treeview">
             <a href="../../order-confirm/confirm.html" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
               <p>
                 アップロード 
                 <i class="right fas fa-caret-right"></i>
@@ -226,8 +259,9 @@
             <div class="card bg-transparent border-0 shadow-none" >
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped text-center bg-light">
-                  <thead class="bg-secondary">
+                <div class="table-responsive">
+                <table class="table table-bordered bg-light">
+                  <thead class="bg-secondary  text-center">
                   <tr>
                     <th>商品登録日時</th>
                     <th>商品コード</th>
@@ -241,7 +275,7 @@
                     <th>返却ステータス</th>
                   </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="text-center">
                   <tr>
                     <td>2021/1/16 13:46</td>
                     <td><a href="#">XZMASFWO</a></td>
@@ -279,21 +313,26 @@
                     <td style="color: red;">未発送</td>
                   </tr>
                   </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>商品登録日時</th>
-                    <th>商品コード</th>
-                    <th>購入日</th>
-                    <th>店舗名</th>
-                    <th>商品金額</th>
-                    <th>リリース手続き期限</th>
-                    <th>ブランド</th>
-                    <th>カテゴリ</th>
-                    <th>お支払い済み金額</th>
-                    <th>返却ステータス</th>
-                  </tr>
-                  </tfoot>
                 </table>
+                </div>
+                <div class="mt-5 d-flex justify-content-center">
+                  <nav aria-label="...">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" tabindex="-1"> < </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active">
+                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#"> > </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
               </div>
               <!-- /.card-body -->
             </div>
@@ -328,11 +367,6 @@
 <script src="../../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables -->
-<script src="../../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="../../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="../../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <!-- AdminLTE -->
 <script src="../../../dist/js/adminlte.js"></script>
 
@@ -341,26 +375,5 @@
 <script src="../../../dist/js/demo.js"></script>
 <script src="../../../dist/js/pages/dashboard3.js"></script>
 
-<!-- page script -->
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true,
-      "autoWidth": false,
-    });
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-
-
-
-</script>
 </body>
 </html>

@@ -11,9 +11,6 @@
   <link rel="stylesheet" href="../../../plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="../../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="../../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../../dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
@@ -65,20 +62,58 @@
   .border-blue {
     border: 1px solid #7ac0ce!important;
   }
-  .text-light-blue {
+  .pagination li a{
+    border: 1px solid #7ac0ce;
+    margin: 2px;
+    background-color: transparent;
+    border-radius: 0px!important;
+    color: #7ac0ce;
+  }
+  .nav-pills .nav-link {
+    color: white;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #E2F0F2;
     color: #0b9eb2;
+  }
+  .nav-pills .nav-link:not(.active):hover {
+    color: #ffffffb4;
+  }
+  .sidebar .nav-link {
+    border-bottom: 1px solid white;
+    border-radius: 0px!important;
+  }
+  .page-link:hover {
+    color: #7ac0ce;
+    background-color: #e1e3e6;
+    border-color: #7ac0ce;
+  }
+  .alert-info {
+    color: #0b9eb2;
+    background: #E2F0F2;
+    border-color: #E2F0F2;
     font-weight: bold;
   }
-  .bg-alert {
-    background-color: #E2F0F2!important;
-    color: #0b9eb2;
+  .btn-secondary {
+    color: #000000;
     font-weight: bold;
-    border: none;
+    background-color: #c8cdcf;
+    border: #c8cdcf;
   }
   @media (max-width: 992px) {
     .logo-style {
       left: 38vw;
   }
+}
+@media (max-width: 765px) {
+    .mt-cus {
+      margin-top: 20px;
+    }
+    .span-ico {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
 }
 
 </style>
@@ -95,7 +130,7 @@
        <!-- Brand Logo -->
       
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <a class="nav-link  text-light-blue" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars "></i></a>
       </li>
     </ul>
 
@@ -104,7 +139,7 @@
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link" href="../../login/login.html">
+        <a class="nav-link text-light-blue" href="../../login/login.html">
           <p class="fw-bold">ログアウト</p>
         </a>
     </ul>
@@ -126,7 +161,6 @@
 
          <li class="nav-item has-treeview">
           <a href="../../../index.html" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               ダッシュボード
               <i class="right fas fa-caret-right"></i>
@@ -138,7 +172,6 @@
          
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-copy"></i>
               <p>
                 ユーザー検索
                 <i class="right fas fa-caret-right"></i>
@@ -147,15 +180,14 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="../../search/by-info/search-user.html" class="nav-link active">
-                  <i class="left fas fa-caret-right px-3"></i>
+                  <i class="left fas fa-caret-right px-2"></i>
                   <p>登録情報で検索</p>
                 </a>
               </li>
               <li class="nav-item ">
-                <a href="../../search/exceeded-period.html" class="nav-link d-flex">
-                  <i class="left fas fa-caret-right px-3"></i>
-                  <div><p>返却期限超過 ユーザー検索</p></div>
-                  
+                <a href="../../search/exceeded-period.html" class="nav-link d-flex pr-0">
+                  <i class="left fas fa-caret-right px-2 pt-1"></i>
+                  <p>返却期限超過 ユーザー検索</p>
                 </a>
               </li>
             </ul>
@@ -165,7 +197,6 @@
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 ダウンロード
                 <i class="right fas fa-caret-right"></i>
@@ -174,13 +205,13 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="../../download/shipping-address.html" class="nav-link">
-                  <i class="left fas fa-caret-right px-3"></i>
+                  <i class="left fas fa-caret-right px-2"></i>
                   <p>発送手続き商品</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="../../download/checkout.html" class="nav-link">
-                  <i class="left fas fa-caret-right px-3"></i>
+                  <i class="left fas fa-caret-right px-2"></i>
                   <p>決済ログ</p>
                 </a>
               </li>
@@ -191,7 +222,6 @@
 
           <li class="nav-item has-treeview">
             <a href="../../order-confirm/confirm.html" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
               <p>
                 アップロード 
                 <i class="right fas fa-caret-right"></i>
@@ -206,6 +236,7 @@
     <!-- /.sidebar -->
   </aside>
 
+  <!-- Content Wrapper. Contains page content -->
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -324,7 +355,7 @@
                             <div class="col">
                               <div class="form-group">
                                   <label></label>
-                                  <button class="btn btn-dark mt-2" style="width: 100%; padding: 14px!important;">住所検索</button>
+                                  <button class="btn btn-secondary mt-2" style="width: 100%; padding: 14px!important;">住所検索</button>
                               </div>
                             </div>
                         </div>
@@ -404,7 +435,10 @@
                  <!-- ./row  -->
                  <div class="row">
                     <div class="col-6 col-xl-5">
-                        <button class="btn btn-info py-3 mb-3" style="width: 100%;">登録商品一覧</button>
+                        <button class="btn btn-info py-3 mb-3" style="width: 100%;">
+                          <i class="left fas fa-caret-right px-2" style="float: left;
+                          padding: 4px;"></i>
+                          登録商品一覧</button>
                     </div>
                 </div>
       
@@ -422,8 +456,9 @@
                 <div class="row">
                     <div class="col col-12 col-xl-10">
                         <div class="my-3 text-light-blue">商品コードをクリックすると、登録商品画面に遷移します。</div>
-                        <table id="example1" class="table table-bordered table-striped bg-light text-center">
-                            <thead class="bg-secondary">
+                        <div class="table-responsive">
+                          <table class="table table-bordered bg-light">
+                            <thead class="bg-secondary  text-center">
                                 <tr>
                                     <th>LINE payナンバー</th>
                                     <th>お名前</th>
@@ -435,7 +470,7 @@
                                     <th>職業</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="text-center">
                                 <tr>
                                     <td><a href="#">12345678901</a></td>
                                     <td>伊藤　忠雄</td>
@@ -448,6 +483,7 @@
                                 </tr>
                             </tbody>
                         </table>
+                        </div>
                     </div>
                 </div>
 
@@ -521,11 +557,6 @@
 <script src="../../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables -->
-<script src="../../../plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="../../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="../../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <!-- AdminLTE -->
 <script src="../../../dist/js/adminlte.js"></script>
 
@@ -534,26 +565,5 @@
 <script src="../../../dist/js/demo.js"></script>
 <script src="../../../dist/js/pages/dashboard3.js"></script>
 
-<!-- page script -->
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true,
-      "autoWidth": false,
-    });
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-
-
-
-</script>
 </body>
 </html>

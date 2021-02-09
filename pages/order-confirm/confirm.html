@@ -20,6 +20,7 @@
   .text-light-blue {
     color: #0b9eb2;
     font-weight: bold;
+    letter-spacing: 2px;
   }
   .bg-light-blue {
     background-color: #0b9eb2;
@@ -59,6 +60,9 @@
       -webkit-transform: rotate(0deg)!important;
       transform: rotate(0deg)!important;
   }
+  .nav-sidebar .menu-open>.nav-link i.right {
+    transform: rotate(90deg)!important;
+  }
   .border-blue {
     border: 1px solid #7ac0ce!important;
   }
@@ -79,7 +83,7 @@
   .nav-pills .nav-link:not(.active):hover {
     color: #ffffffb4;
   }
-  .sidebar .nav-link {
+  .sidebar .nav-item {
     border-bottom: 1px solid white;
     border-radius: 0px!important;
   }
@@ -96,6 +100,15 @@
   .btn-secondary {
     color: #000000;
     font-weight: bold;
+  }
+  .menu-active{
+    background-color:#E2F0F2!important;
+  }
+  .menu-active a {
+    color: #0b9eb2!important;
+  }
+  .active{
+    background-color:#ffffff!important;
   }
   @media (max-width: 992px) {
     .logo-style {
@@ -147,7 +160,7 @@
   <aside class="main-sidebar sidebar-dark" style="margin-top: 57px;background-color: #7ac0ce;">
    
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar px-0">
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -217,8 +230,8 @@
 
           <!-- four -->
 
-          <li class="nav-item has-treeview menu-open">
-            <a href="../order-confirm/confirm.html" class="nav-link active">
+          <li class="nav-item has-treeview menu-open menu-active active">
+            <a href="../order-confirm/confirm.html" class="nav-link">
               <p>
                 アップロード 
                 <i class="right fas fa-caret-right"></i>

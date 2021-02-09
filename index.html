@@ -41,7 +41,6 @@
     font-weight: bold;
     letter-spacing: 2px;
   }
-  
   .pagination li a{
     border: 1px solid #7ac0ce;
     margin: 2px;
@@ -87,6 +86,12 @@
   }
   .active{
     background-color:#ffffff!important;
+  }
+  .nav-link p {
+    letter-spacing: 2px;
+  }
+  .sidebar-collapse a {
+    white-space: nowrap !important;;
   }
   @media (max-width: 992px) {
     .logo-style {
@@ -186,14 +191,14 @@ to get the desired effect
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="pages/search/by-info/search-user.html" class="nav-link">
-                  <i class="left fas fa-caret-right px-2"></i>
-                  <p>登録情報で検索</p>
+                  <i class="left fas fa-caret-right px-3"></i>
+                  <p class="px-2">登録情報で検索</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/search/exceeded-period.html" class="nav-link d-flex pr-0">
-                  <i class="left fas fa-caret-right px-2 pt-1"></i>
-                  <p>返却期限超過 ユーザー検索</p>  
+                <a href="pages/search/exceeded-period.html" class="nav-link d-flex pr-5" style="white-space: normal;" >
+                  <i class="left fas fa-caret-right px-3 pt-1"></i>
+                  <p class="px-2 pr-3">返却期限超過ユーザー検索</p> 
                 </a>
               </li>
             </ul>
@@ -211,14 +216,14 @@ to get the desired effect
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="pages/download/shipping-address.html" class="nav-link">
-                  <i class="left fas fa-caret-right px-2"></i>
-                  <p>発送手続き商品</p>
+                  <i class="left fas fa-caret-right px-3"></i>
+                  <p class="px-2">発送手続き商品</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/download/checkout.html" class="nav-link">
-                  <i class="left fas fa-caret-right px-2"></i>
-                  <p>決済ログ</p>
+                  <i class="left fas fa-caret-right px-3"></i>
+                  <p class="px-2">決済ログ</p>
                 </a>
               </li>
             </ul>
@@ -292,7 +297,7 @@ to get the desired effect
               <div class="card-body d-flex flex-wrap mt-3 p-0">
 
                 <!-- card info -->
-                <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
                   <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 90%;">      
                     <div class="info-box-content text-center">
                       <span class="text-light-blue py-3 font-cus-header">参加登録数</span>
@@ -307,7 +312,7 @@ to get the desired effect
                 </div>
 
                   <!-- /.col -->
-                  <div class="col-12 col-sm-6 col-md-3 mb-3">
+                  <div class="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
                     <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 90%;">      
                       <div class="info-box-content text-center">
                         <span class="text-light-blue py-3 font-cus-header">商品登録数</span>
@@ -325,7 +330,7 @@ to get the desired effect
                 <!-- fix for small devices only -->
                 <div class="clearfix hidden-md-up"></div>
 
-                <div class="col-12 col-sm-6 col-md-3 mb-3" >
+                <div class="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center" >
                   <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 90%;">      
                     <div class="info-box-content text-center">
                       <span class="text-light-blue py-3 font-cus-header">発送手続き数</span>
@@ -340,7 +345,7 @@ to get the desired effect
                 </div>
                 <!-- /.col -->
                 
-                <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
                   <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 90%;">      
                     <div class="info-box-content text-center">
                       <span class="text-light-blue py-3 font-cus-header">支払い金額</span>
@@ -354,7 +359,7 @@ to get the desired effect
                 </div>
                 <!-- /.col -->
 
-                <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
                   <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 90%;">      
                     <div class="info-box-content text-center">
                       <span class="text-light-blue py-3 font-cus-header">返金金額</span>

@@ -96,6 +96,14 @@
   .nav-icon {
     padding-right: 10px;
   }
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-column-gap: 30px;
+  }
+  .grid-item {
+    width: 100%;
+  }
   @media (max-width: 992px) {
     .logo-style {
       left: 38vw;
@@ -107,6 +115,9 @@
     }
     .mt-cus {
       margin-top: 20px;
+    }
+    .grid-container {
+      grid-template-columns: repeat(1,1fr);
     }
     
 
@@ -182,7 +193,6 @@ to get the desired effect
             </p>
           </a>
         </li>
-
          <!-- two -->
 
           <li class="nav-item has-treeview">
@@ -293,19 +303,17 @@ to get the desired effect
                         </div>
                       </div>
                     </div>
+                    
                 </div>
-                               
-                
               </div>
             </div>
 
             <!-- /.card -->
             <div class="card bg-transparent shadow-none">
-              <div class="card-body d-flex flex-wrap mt-3 p-0">
-
+              <div class="card-body grid-container mt-3 p-0">
                 <!-- card info -->
-                <div class="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
-                  <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 90%;">      
+                <div class="mb-3 px-0 grid-item">
+                  <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 100%;">      
                     <div class="info-box-content text-center">
                       <span class="text-light-blue py-3 font-cus-header">参加登録数</span>
                       <span class="pb-3 font-cus-text">
@@ -319,8 +327,8 @@ to get the desired effect
                 </div>
 
                   <!-- /.col -->
-                  <div class="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
-                    <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 90%;">      
+                  <div class="mb-3 px-0 grid-item">
+                    <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 100%;">      
                       <div class="info-box-content text-center">
                         <span class="text-light-blue py-3 font-cus-header">商品登録数</span>
                         <span class="pb-3 font-cus-text">
@@ -335,10 +343,8 @@ to get the desired effect
                 <!-- /.col -->
 
                 <!-- fix for small devices only -->
-                <div class="clearfix hidden-md-up"></div>
-
-                <div class="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center" >
-                  <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 90%;">      
+                <div class="mb-3 px-0 grid-item">
+                  <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 100%;">      
                     <div class="info-box-content text-center">
                       <span class="text-light-blue py-3 font-cus-header">発送手続き数</span>
                       <span class="pb-3 font-cus-text">
@@ -352,8 +358,8 @@ to get the desired effect
                 </div>
                 <!-- /.col -->
                 
-                <div class="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
-                  <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 90%;">      
+                <div class="mb-3 px-0 grid-item">
+                  <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 100%;">      
                     <div class="info-box-content text-center">
                       <span class="text-light-blue py-3 font-cus-header">支払い金額</span>
                       <span class="pb-3 font-cus-text">
@@ -366,8 +372,8 @@ to get the desired effect
                 </div>
                 <!-- /.col -->
 
-                <div class="col-12 col-sm-6 col-md-3 mb-3 d-flex justify-content-center">
-                  <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 90%;">      
+                <div class="mb-3 px-0 grid-item">
+                  <div class="info-box py-5 shadow-none bg-transparent border-blue" style="width: 100%;">      
                     <div class="info-box-content text-center">
                       <span class="text-light-blue py-3 font-cus-header">返金金額</span>
                       <span class="pb-3 font-cus-text">
